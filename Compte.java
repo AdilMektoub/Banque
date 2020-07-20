@@ -1,29 +1,29 @@
 package Banque;
 
-import java.util.Scanner;
-
 public class Compte {
 
 	int numero;
 	float solde;
 	char devise;
-	Utilisateur user;
+	Utilisateur utilisateur;
 	float decouvert;
-
-	// Constructeurs d'objets
-	public Compte(int numero, float solde, char devise, Utilisateur user, float decouvert) {
+	
+	
+	// Constructeurs de l'objets COMPTE
+	public Compte(int numero, float solde, char devise, Utilisateur utilisateur, float decouvert) {
 		super();
 		this.numero = numero;
 		this.solde = solde;
 		this.devise = devise;
-		this.user = user;
+		this.utilisateur = utilisateur;
 		this.decouvert = decouvert;
+		
 	}
 
 	// rajout des toString
 	@Override
 	public String toString() {
-		return "Compte [numero=" + numero + ", solde=" + solde + ", devise=" + devise + ", user=" + user
+		return "Compte [numero=" + numero + ", solde=" + solde + ", devise=" + devise + ", user=" + utilisateur
 				+ ", decouvert=" + decouvert + "]";
 	}
 
@@ -49,7 +49,7 @@ public class Compte {
 	}
 
 	public Utilisateur getUser() {
-		return user;
+		return utilisateur;
 	}
 
 	public void setNumero(int numero) {
@@ -65,7 +65,7 @@ public class Compte {
 	}
 
 	public void setUser(Utilisateur user) {
-		this.user = user;
+		this.utilisateur = user;
 	}
 
 	// Méthode qui va permettre de transférer
@@ -154,5 +154,8 @@ static void transferer(Compte emmetteur, Compte destinataire, float montant, cha
 			}
 		}
 	}
+
+//Si ajout une commande et passage commande retirer montant du solde du compte
+
 
 }
